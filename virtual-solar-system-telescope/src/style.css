@@ -1,0 +1,202 @@
+body {
+background-image: url('https://www.universetoday.com/wp-content/uploads/2013/10/milky_way.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#solar-system {
+  position: relative;
+  width: 60vw; 
+  height: 60vh;
+  transform-style: preserve-3d;
+  margin:  20vh auto 0;
+}
+
+#sun {
+  width: 100px;
+  height: 100px;
+  background-image: url('https://cdn.pixabay.com/animation/2023/04/27/05/50/05-50-14-338__340.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+   animation: rotate var(--orbit-duration) linear infinite;
+}
+#orbit-mercury { --orbit-duration: 88s; }
+#orbit-venus { --orbit-duration: 225s; }
+#orbit-earth { --orbit-duration: 365s; }
+#orbit-mars { --orbit-duration: 687s; }
+#orbit-jupiter { --orbit-duration: 4333s; }
+#orbit-saturn { --orbit-duration: 10759s; }
+#orbit-uranus { --orbit-duration: 30687s; }
+#orbit-neptune { --orbit-duration: 60190s; }
+
+
+#orbit-mercury {
+  width: 120px;
+  height: 120px;
+}
+#orbit-venus {
+  width: 180px;
+  height: 180px;
+}
+#orbit-earth {
+  width: 240px;
+  height: 240px;
+}
+#orbit-mars {
+  width: 300px;
+  height: 300px;
+}
+#orbit-jupiter {
+  width: 360px;
+  height: 360px;
+}
+#orbit-saturn {
+  width: 420px;
+  height: 420px;
+}
+#orbit-uranus {
+  width: 480px;
+  height: 480px;
+}
+#orbit-neptune {
+  width: 540px;
+  height: 540px;
+}
+
+/* Style planets */
+#mercury {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mercury.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+#venus {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/venus.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+#earth {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/earth.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#mars {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mars.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+#jupiter {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/jupiter.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#saturn {
+  background-image: url('https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/AW_187527_OUTERPLANETS_Saturn_doegjg.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+#uranus {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/uranus.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+#neptune {
+  background-image: url('https://www.solarsystemscope.com/spacepedia/images/handbook/renders/neptune.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+
+.planet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: gray; 
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%) rotate(-90deg);translateX(-50%);
+}
+#mercury { left: 50%; margin-left: -60px; }
+#venus { left: 50%; margin-left: -90px; }
+#earth { left: 50%; margin-left: -120px; }
+#mars { left: 50%; margin-left: -150px; }
+#jupiter { left: 50%; margin-left: -180px; }
+#saturn { left: 50%; margin-left: -210px; }
+#uranus { left: 50%; margin-left: -240px; }
+#neptune { left: 50%; margin-left: -270px; }
+
+#info-panel {
+  color: white;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+#navigation-controls button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+@keyframes rotatePlanet {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(450deg);
+  }
+}
+#speed-control-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 10; 
+}
+
+#speed-control-label {
+  color: white;
+  margin-right: 10px;
+}
+
+#speed-control-slider {
+  width: 200px;
+}
+
+#animation-controls button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
